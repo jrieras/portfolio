@@ -109,7 +109,7 @@ a {
 
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(340px, 0.92fr);
+  grid-template-columns: minmax(0, 1.18fr) minmax(300px, 0.72fr);
   gap: var(--space-6);
   align-items: start;
   min-height: auto;
@@ -214,6 +214,8 @@ h3 {
 .hero-visual {
   position: relative;
   overflow: hidden;
+  width: min(100%, 420px);
+  justify-self: end;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   background:
@@ -404,6 +406,98 @@ h3 {
   margin-left: auto;
 }
 
+.experience-section {
+  border-top: 1px solid var(--border);
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 15px;
+  width: 2px;
+  background: var(--border);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 32px minmax(0, 1fr);
+  gap: var(--space-4);
+}
+
+.timeline-marker {
+  position: relative;
+  z-index: 1;
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--surface);
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px var(--border-strong);
+}
+
+.timeline-item.accent-blue .timeline-marker {
+  background: var(--blue);
+}
+
+.timeline-item.accent-violet .timeline-marker {
+  background: var(--violet);
+}
+
+.timeline-item.accent-amber .timeline-marker {
+  background: var(--amber);
+}
+
+.timeline-content {
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+.timeline-content h3 {
+  max-width: 780px;
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+}
+
+.timeline-content p {
+  max-width: 860px;
+  color: var(--muted);
+}
+
+.timeline-meta {
+  margin-bottom: var(--space-2);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.win-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.win-list span {
+  padding: 7px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-muted);
+  color: var(--text);
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
 .card p {
   margin-bottom: 0;
   color: var(--muted);
@@ -522,7 +616,6 @@ h3 {
 
 @media (max-width: 920px) {
   .hero,
-  .about-section,
   .contact-section,
   .signal-strip {
     grid-template-columns: 1fr;
@@ -587,7 +680,8 @@ h3 {
   }
 
   .hero-visual {
-    max-width: 380px;
+    max-width: 340px;
+    justify-self: center;
     margin: 0 auto;
   }
 
@@ -625,6 +719,24 @@ h3 {
   .button-row,
   .button {
     width: 100%;
+  }
+
+  .timeline::before {
+    left: 12px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 26px minmax(0, 1fr);
+    gap: var(--space-3);
+  }
+
+  .timeline-marker {
+    width: 26px;
+    height: 26px;
+  }
+
+  .timeline-content {
+    padding: var(--space-3);
   }
 
   .footer {

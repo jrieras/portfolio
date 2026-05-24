@@ -27,8 +27,8 @@ Most content lives in `index.html`.
 Common edits:
 
 - Change the headline in the hero section.
-- Update the selected work cards.
-- Replace the writing links.
+- Update the capability cards.
+- Update the work experience timeline.
 - Replace the contact placeholders.
 
 Visual styling lives in `styles.css`.
@@ -48,7 +48,6 @@ In `index.html`, replace:
 - `your-email@example.com`
 - `LinkedIn` link currently set to `#`
 - `GitHub` link currently set to `#`
-- Writing article links currently set to `#`
 
 If you replace the portrait later, keep the new image filename simple, then update this line in `index.html`:
 

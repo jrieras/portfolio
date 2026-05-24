@@ -6,6 +6,7 @@ It uses only:
 
 - `index.html`
 - `styles.css`
+- `portrait.png`
 
 There is no React, Next.js, Tailwind, Bootstrap, Vite, npm, or framework. You can open the site directly in a browser.
 
@@ -32,6 +33,8 @@ Common edits:
 
 Visual styling lives in `styles.css`.
 
+The hero image is `portrait.png`.
+
 Common style edits:
 
 - Colors are at the top under `:root`.
@@ -46,6 +49,12 @@ In `index.html`, replace:
 - `LinkedIn` link currently set to `#`
 - `GitHub` link currently set to `#`
 - Writing article links currently set to `#`
+
+If you replace the portrait later, keep the new image filename simple, then update this line in `index.html`:
+
+```html
+src="portrait.png"
+```
 
 ## Publish With GitHub Pages
 

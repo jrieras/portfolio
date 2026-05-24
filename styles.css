@@ -456,6 +456,18 @@ h3 {
   background: var(--amber);
 }
 
+.timeline-item.education-kellogg .timeline-marker {
+  background: #4e2a84;
+}
+
+.timeline-item.education-babson .timeline-marker {
+  background: #0b4f3a;
+}
+
+.timeline-item.education-fiu .timeline-marker {
+  background: linear-gradient(135deg, #081e3f 0 50%, #c5960c 50% 100%);
+}
+
 .timeline-content {
   padding: var(--space-4);
   border: 1px solid var(--border);
@@ -479,6 +491,25 @@ h3 {
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.education-block {
+  margin-top: var(--space-6);
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border);
+}
+
+.compact-heading {
+  margin-bottom: var(--space-4);
+}
+
+.compact-heading h2 {
+  max-width: 680px;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.education-timeline .timeline-content h3 {
+  font-size: clamp(1.08rem, 1.8vw, 1.35rem);
 }
 
 .card p {

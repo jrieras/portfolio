@@ -45,9 +45,8 @@ Common style edits:
 
 In `index.html`, replace:
 
-- `your-email@example.com`
 - `LinkedIn` link currently set to `#`
-- `GitHub` link currently set to `#`
+- WhatsApp phone number if it changes
 
 If you replace the portrait later, keep the new image filename simple, then update this line in `index.html`:
 

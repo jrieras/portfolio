@@ -8,7 +8,97 @@
       content="JR is a Product & GTM leader for AI, APIs, developer platforms, fintech-adjacent workflows, and messaging infrastructure."
     >
     <title>JR - Product & GTM Leader</title>
-    <link rel="stylesheet" href="styles.css?v=20260525-bars">
+    <link rel="stylesheet" href="styles.css?v=20260525-bars-v2">
+    <style>
+      .skill-dashboard .skill-bar-chart {
+        display: grid;
+        gap: 24px;
+      }
+
+      .skill-dashboard .skill-row {
+        display: grid;
+        grid-template-columns: minmax(250px, 38%) minmax(0, 1fr);
+        align-items: center;
+        gap: 24px;
+      }
+
+      .skill-dashboard .skill-bar-copy h3 {
+        margin: 0 0 4px;
+        color: #155f76;
+        font-size: 0.94rem;
+        line-height: 1.2;
+      }
+
+      .skill-dashboard .skill-description {
+        display: block;
+        color: #5b6760;
+        font-size: 0.76rem;
+        line-height: 1.35;
+      }
+
+      .skill-dashboard .skill-track {
+        height: 34px;
+        border-left: 1px solid #cbd8d0;
+        background: repeating-linear-gradient(
+          90deg,
+          rgba(17, 21, 19, 0.14) 0 1px,
+          transparent 1px 20%
+        );
+      }
+
+      .skill-dashboard .skill-fill {
+        display: block;
+        height: 24px;
+        margin-top: 5px;
+        border-radius: 3px;
+        background: #155f76;
+        box-shadow: 0 7px 16px rgba(21, 95, 118, 0.12);
+      }
+
+      .skill-dashboard .fill-100 {
+        width: 100%;
+      }
+
+      .skill-dashboard .fill-99 {
+        width: 97%;
+      }
+
+      .skill-dashboard .fill-98 {
+        width: 94%;
+      }
+
+      .skill-dashboard .skill-axis {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        margin-left: calc(38% + 24px);
+        padding-top: 8px;
+        color: #5b6760;
+        font-size: 0.78rem;
+        font-weight: 700;
+      }
+
+      .skill-dashboard .skill-axis span {
+        text-align: center;
+      }
+
+      .skill-dashboard .skill-axis span:first-child {
+        text-align: left;
+      }
+
+      .skill-dashboard .skill-axis span:last-child {
+        text-align: right;
+      }
+
+      @media (max-width: 680px) {
+        .skill-dashboard .skill-row {
+          grid-template-columns: 1fr;
+        }
+
+        .skill-dashboard .skill-axis {
+          margin-left: 0;
+        }
+      }
+    </style>
   </head>
   <body>
     <header class="site-header">

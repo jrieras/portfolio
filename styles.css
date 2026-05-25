@@ -104,7 +104,7 @@ a {
 .section {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-7) var(--space-4);
+  padding: var(--space-6) var(--space-4);
 }
 
 .hero {
@@ -313,7 +313,12 @@ h3 {
 }
 
 .section-heading {
-  margin-bottom: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
+.section-heading .eyebrow {
+  font-size: 0.94rem;
+  font-weight: 800;
 }
 
 .card-grid {
@@ -496,14 +501,14 @@ h3 {
 }
 
 .education-block {
-  margin-top: var(--space-6);
-  padding-top: var(--space-6);
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--border);
 }
 
 .skills-block {
-  margin-top: var(--space-6);
-  padding-top: var(--space-6);
+  margin-top: var(--space-5);
+  padding-top: var(--space-5);
   border-top: 1px solid var(--border);
 }
 
@@ -566,8 +571,8 @@ h3 {
   margin-top: 7px;
   border-radius: 4px;
   background: var(--skill-color);
-  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 72%, #ffffff));
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--skill-color) 22%, transparent);
+  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 78%, #ffffff));
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--skill-color) 16%, transparent);
 }
 
 .score-99 {
@@ -579,23 +584,23 @@ h3 {
 }
 
 .chart-green {
-  --skill-color: #48d597;
+  --skill-color: #135f45;
 }
 
 .chart-blue {
-  --skill-color: #5da2ff;
+  --skill-color: #315fbd;
 }
 
 .chart-amber {
-  --skill-color: #ffd166;
+  --skill-color: #a15f13;
 }
 
 .chart-violet {
-  --skill-color: #b99cff;
+  --skill-color: #6e4bb6;
 }
 
 .chart-teal {
-  --skill-color: #79e0d6;
+  --skill-color: #2f7f76;
 }
 
 .tool-list {

@@ -512,104 +512,6 @@ h3 {
   border-top: 1px solid var(--border);
 }
 
-.skills-block {
-  margin-top: var(--space-5);
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--border);
-}
-
-.skill-dashboard {
-  display: grid;
-  gap: var(--space-3);
-  padding: var(--space-5);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: #ffffff;
-  color: var(--text);
-  box-shadow: var(--shadow);
-}
-
-.skill-bar-chart {
-  display: grid;
-  gap: var(--space-4);
-}
-
-.skill-row {
-  display: grid;
-  grid-template-columns: minmax(250px, 38%) minmax(0, 1fr);
-  align-items: center;
-  gap: var(--space-3);
-}
-
-.skill-bar-copy h3 {
-  margin: 0 0 4px;
-  color: #155f76;
-  font-size: 0.94rem;
-  line-height: 1.2;
-}
-
-.skill-description {
-  display: block;
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.76rem;
-  line-height: 1.35;
-}
-
-.skill-track {
-  height: 34px;
-  border-left: 1px solid var(--border-strong);
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(17, 21, 19, 0.14) 0 1px,
-      transparent 1px 20%
-    );
-}
-
-.skill-fill {
-  display: block;
-  height: 24px;
-  margin-top: 5px;
-  border-radius: 3px;
-  background: #155f76;
-  box-shadow: 0 7px 16px rgba(21, 95, 118, 0.12);
-}
-
-.fill-100 {
-  width: 100%;
-}
-
-.fill-99 {
-  width: 97%;
-}
-
-.fill-98 {
-  width: 94%;
-}
-
-.skill-axis {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  margin-left: calc(38% + var(--space-3));
-  padding-top: var(--space-1);
-  color: var(--muted);
-  font-size: 0.78rem;
-  font-weight: 700;
-}
-
-.skill-axis span {
-  text-align: center;
-}
-
-.skill-axis span:first-child {
-  text-align: left;
-}
-
-.skill-axis span:last-child {
-  text-align: right;
-}
-
 .tool-list {
   display: flex;
   flex-wrap: wrap;
@@ -773,13 +675,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-row {
-    grid-template-columns: minmax(230px, 38%) minmax(0, 1fr);
-  }
-
-  .skill-axis {
-    margin-left: calc(38% + var(--space-3));
-  }
 }
 
 @media (max-width: 680px) {
@@ -869,18 +764,6 @@ h3 {
 
   .contact-links {
     grid-template-columns: 1fr;
-  }
-
-  .skill-row {
-    grid-template-columns: 1fr;
-  }
-
-  .skill-bar-copy {
-    grid-column: auto;
-  }
-
-  .skill-axis {
-    margin-left: 0;
   }
 
   .button-row,

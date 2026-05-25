@@ -507,92 +507,111 @@ h3 {
   border-top: 1px solid var(--border);
 }
 
-.skill-matrix {
+.skill-dashboard {
   display: grid;
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-  gap: var(--space-3);
-}
-
-.skill-tile {
-  position: relative;
-  display: grid;
-  align-content: space-between;
-  min-height: 210px;
-  padding: var(--space-4);
-  border: 1px solid var(--border);
+  gap: var(--space-2);
+  padding: var(--space-5);
   border-radius: var(--radius);
-  background: var(--surface);
-  box-shadow: 0 12px 32px rgba(17, 21, 19, 0.05);
+  background: #080d0b;
+  color: #ffffff;
+  box-shadow: var(--shadow);
 }
 
-.skill-tile::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  height: 5px;
-  border-radius: var(--radius) var(--radius) 0 0;
-  background: var(--accent);
-}
-
-.skill-tile.tile-blue::before {
-  background: var(--blue);
-}
-
-.skill-tile.tile-violet::before {
-  background: var(--violet);
-}
-
-.skill-tile.tile-amber::before {
-  background: var(--amber);
-}
-
-.skill-tile:nth-child(1),
-.skill-tile:nth-child(2),
-.skill-tile:nth-child(3) {
-  grid-column: span 2;
-}
-
-.skill-tile:nth-child(4),
-.skill-tile:nth-child(5) {
-  grid-column: span 3;
-}
-
-.skill-index {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 28px;
-  margin-bottom: var(--space-4);
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  color: var(--muted);
+.skill-scale {
+  display: flex;
+  justify-content: space-between;
+  padding-left: min(270px, 30%);
+  color: rgba(255, 255, 255, 0.68);
   font-size: 0.76rem;
   font-weight: 800;
 }
 
-.skill-tile h3 {
-  margin-bottom: var(--space-2);
-  font-size: clamp(1.1rem, 1.8vw, 1.35rem);
+.skill-scale span {
+  position: relative;
 }
 
-.skill-tile p {
-  margin-bottom: var(--space-4);
-  color: var(--muted);
-  font-size: 0.94rem;
-  line-height: 1.45;
+.skill-scale span:not(:first-child) {
+  text-align: center;
 }
 
-.skill-tile strong {
-  display: inline-flex;
-  width: fit-content;
-  padding: 6px 9px;
-  border-radius: 999px;
-  background: var(--surface-muted);
-  color: var(--accent-dark);
-  font-size: 0.78rem;
+.skill-bars {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.skill-bar-row {
+  display: grid;
+  grid-template-columns: minmax(190px, 30%) minmax(0, 1fr);
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skill-bar-copy h3 {
+  margin: 0;
+  color: var(--skill-color);
+  font-size: 0.96rem;
+  line-height: 1.2;
+}
+
+.skill-bar-copy p {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skill-bar-track {
+  position: relative;
+  height: 42px;
+  border-left: 1px solid rgba(255, 255, 255, 0.36);
+  border-right: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 0;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.2) 0 1px,
+      transparent 1px 25%
+    );
+}
+
+.skill-bar-fill {
+  display: block;
+  height: 28px;
+  margin-top: 7px;
+  border-radius: 4px;
+  background: var(--skill-color);
+  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 72%, #ffffff));
+  box-shadow: 0 8px 22px color-mix(in srgb, var(--skill-color) 22%, transparent);
+}
+
+.score-99 {
+  width: 99%;
+}
+
+.score-98 {
+  width: 98%;
+}
+
+.chart-green {
+  --skill-color: #48d597;
+}
+
+.chart-blue {
+  --skill-color: #5da2ff;
+}
+
+.chart-amber {
+  --skill-color: #ffd166;
+}
+
+.chart-violet {
+  --skill-color: #b99cff;
+}
+
+.chart-teal {
+  --skill-color: #79e0d6;
 }
 
 .tool-list {
@@ -756,6 +775,14 @@ h3 {
   .four-column {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .skill-scale {
+    padding-left: min(190px, 32%);
+  }
+
+  .skill-bar-row {
+    grid-template-columns: minmax(190px, 32%) minmax(0, 1fr);
+  }
 }
 
 @media (max-width: 680px) {
@@ -843,18 +870,25 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .skill-matrix {
+  .skill-scale {
+    display: none;
+  }
+
+  .skill-bar-row {
     grid-template-columns: 1fr;
   }
 
-  .skill-tile,
-  .skill-tile:nth-child(1),
-  .skill-tile:nth-child(2),
-  .skill-tile:nth-child(3),
-  .skill-tile:nth-child(4),
-  .skill-tile:nth-child(5) {
+  .skill-bar-copy {
     grid-column: auto;
-    min-height: auto;
+  }
+
+  .skill-bar-track {
+    height: 14px;
+  }
+
+  .skill-bar-fill {
+    height: 14px;
+    margin-top: 0;
   }
 
   .button-row,

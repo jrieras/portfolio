@@ -161,10 +161,11 @@ h3 {
 }
 
 .hero-copy {
-  max-width: 760px;
+  max-width: 720px;
   margin-bottom: var(--space-4);
   color: var(--muted);
   font-size: clamp(1rem, 1.4vw, 1.12rem);
+  line-height: 1.62;
 }
 
 .button-row {

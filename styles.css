@@ -530,25 +530,23 @@ h3 {
 
 .skill-bar-row {
   display: grid;
-  grid-template-columns: minmax(190px, 30%) minmax(0, 1fr);
+  grid-template-columns: minmax(250px, 36%) minmax(0, 1fr);
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .skill-bar-copy h3 {
-  margin: 0;
+  margin: 0 0 4px;
   color: var(--skill-color);
-  font-size: 0.96rem;
+  font-size: 0.98rem;
   line-height: 1.2;
 }
 
 .skill-bar-copy p {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  white-space: nowrap;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.35;
 }
 
 .skill-bar-track {
@@ -571,8 +569,8 @@ h3 {
   margin-top: 7px;
   border-radius: 4px;
   background: var(--skill-color);
-  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 78%, #ffffff));
-  box-shadow: 0 8px 22px color-mix(in srgb, var(--skill-color) 16%, transparent);
+  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 88%, #ffffff));
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--skill-color) 12%, transparent);
 }
 
 .score-99 {
@@ -584,23 +582,23 @@ h3 {
 }
 
 .chart-green {
-  --skill-color: #135f45;
+  --skill-color: #0d4532;
 }
 
 .chart-blue {
-  --skill-color: #315fbd;
+  --skill-color: #243f84;
 }
 
 .chart-amber {
-  --skill-color: #a15f13;
+  --skill-color: #7a4311;
 }
 
 .chart-violet {
-  --skill-color: #6e4bb6;
+  --skill-color: #4f357f;
 }
 
 .chart-teal {
-  --skill-color: #2f7f76;
+  --skill-color: #235f58;
 }
 
 .tool-list {
@@ -766,7 +764,7 @@ h3 {
   }
 
   .skill-bar-row {
-    grid-template-columns: minmax(190px, 32%) minmax(0, 1fr);
+    grid-template-columns: minmax(230px, 38%) minmax(0, 1fr);
   }
 }
 

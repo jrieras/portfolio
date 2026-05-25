@@ -540,17 +540,27 @@ h3 {
   line-height: 1.4;
 }
 
-.meter-track {
-  overflow: hidden;
-  height: 12px;
+.skill-meter {
+  width: 100%;
+  height: 14px;
+  border: 0;
   border-radius: 999px;
   background: var(--surface-muted);
 }
 
-.meter-track span {
-  display: block;
-  height: 100%;
-  border-radius: inherit;
+.skill-meter::-webkit-meter-bar {
+  border: 0;
+  border-radius: 999px;
+  background: var(--surface-muted);
+}
+
+.skill-meter::-webkit-meter-optimum-value {
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), var(--blue));
+}
+
+.skill-meter::-moz-meter-bar {
+  border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), var(--blue));
 }
 

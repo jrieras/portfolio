@@ -529,12 +529,12 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.skill-dot-map {
+.skill-bar-chart {
   display: grid;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
-.skill-dot-row {
+.skill-row {
   display: grid;
   grid-template-columns: minmax(250px, 38%) minmax(0, 1fr);
   align-items: center;
@@ -543,7 +543,7 @@ h3 {
 
 .skill-bar-copy h3 {
   margin: 0 0 4px;
-  color: var(--skill-color);
+  color: #155f76;
   font-size: 0.94rem;
   line-height: 1.2;
 }
@@ -556,58 +556,58 @@ h3 {
   line-height: 1.35;
 }
 
-.skill-dots {
-  display: grid;
-  grid-template-columns: repeat(10, minmax(10px, 1fr));
-  gap: 9px;
-  align-items: center;
+.skill-track {
+  height: 34px;
+  border-left: 1px solid var(--border-strong);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(17, 21, 19, 0.14) 0 1px,
+      transparent 1px 20%
+    );
 }
 
-.skill-dot {
+.skill-fill {
   display: block;
-  aspect-ratio: 1;
-  width: min(100%, 18px);
-  justify-self: center;
-  border-radius: 999px;
-  background: var(--surface-muted);
-  box-shadow: inset 0 0 0 1px var(--border-strong);
+  height: 24px;
+  margin-top: 5px;
+  border-radius: 3px;
+  background: #155f76;
+  box-shadow: 0 7px 16px rgba(21, 95, 118, 0.12);
 }
 
-.skill-dot.filled {
-  background: var(--skill-color);
-  box-shadow: 0 5px 13px color-mix(in srgb, var(--skill-color) 15%, transparent);
+.fill-100 {
+  width: 100%;
 }
 
-.skill-dot.partial {
-  background: linear-gradient(90deg, var(--skill-color) 58%, var(--surface-muted) 58%);
-  box-shadow:
-    inset 0 0 0 1px color-mix(in srgb, var(--skill-color) 28%, var(--border-strong)),
-    0 5px 13px color-mix(in srgb, var(--skill-color) 12%, transparent);
+.fill-99 {
+  width: 97%;
 }
 
-.skill-dot.empty {
-  background: #eef3ef;
-  box-shadow: inset 0 0 0 1px var(--border-strong);
+.fill-98 {
+  width: 94%;
 }
 
-.chart-green {
-  --skill-color: #1f6f78;
+.skill-axis {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  margin-left: calc(38% + var(--space-3));
+  padding-top: var(--space-1);
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 700;
 }
 
-.chart-blue {
-  --skill-color: #1f6f78;
+.skill-axis span {
+  text-align: center;
 }
 
-.chart-amber {
-  --skill-color: #1f6f78;
+.skill-axis span:first-child {
+  text-align: left;
 }
 
-.chart-violet {
-  --skill-color: #1f6f78;
-}
-
-.chart-teal {
-  --skill-color: #1f6f78;
+.skill-axis span:last-child {
+  text-align: right;
 }
 
 .tool-list {
@@ -773,8 +773,12 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-dot-row {
+  .skill-row {
     grid-template-columns: minmax(230px, 38%) minmax(0, 1fr);
+  }
+
+  .skill-axis {
+    margin-left: calc(38% + var(--space-3));
   }
 }
 
@@ -867,7 +871,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .skill-dot-row {
+  .skill-row {
     grid-template-columns: 1fr;
   }
 
@@ -875,8 +879,8 @@ h3 {
     grid-column: auto;
   }
 
-  .skill-dots {
-    gap: 6px;
+  .skill-axis {
+    margin-left: 0;
   }
 
   .button-row,

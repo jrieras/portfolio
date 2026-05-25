@@ -177,6 +177,7 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  min-width: 184px;
   min-height: 44px;
   padding: 0 var(--space-4);
   border: 1px solid var(--border-strong);
@@ -227,7 +228,7 @@ h3 {
 .hero-visual img {
   display: block;
   width: 100%;
-  aspect-ratio: 0.92;
+  aspect-ratio: 0.84;
   object-fit: cover;
   object-position: center;
 }
@@ -700,7 +701,7 @@ h3 {
   }
 
   .hero-visual img {
-    aspect-ratio: 1.08;
+    aspect-ratio: 0.96;
     object-position: center 34%;
   }
 

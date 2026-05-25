@@ -513,26 +513,9 @@ h3 {
   padding: var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--surface);
+  background: #ffffff;
   color: var(--text);
   box-shadow: var(--shadow);
-}
-
-.skill-scale {
-  display: none;
-  justify-content: space-between;
-  padding-left: min(270px, 30%);
-  color: rgba(255, 255, 255, 0.68);
-  font-size: 0.76rem;
-  font-weight: 800;
-}
-
-.skill-scale span {
-  position: relative;
-}
-
-.skill-scale span:not(:first-child) {
-  text-align: center;
 }
 
 .skill-bars {
@@ -777,10 +760,6 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-scale {
-    padding-left: min(190px, 32%);
-  }
-
   .skill-bar-row {
     grid-template-columns: minmax(190px, 32%) minmax(0, 1fr);
   }
@@ -869,10 +848,6 @@ h3 {
   .three-column,
   .four-column {
     grid-template-columns: 1fr;
-  }
-
-  .skill-scale {
-    display: none;
   }
 
   .skill-bar-row {

@@ -216,7 +216,7 @@ h3 {
 .hero-visual {
   position: relative;
   overflow: hidden;
-  width: min(100%, 380px);
+  width: min(100%, 400px);
   justify-self: end;
   margin-top: -2px;
   border: 1px solid var(--border);

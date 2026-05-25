@@ -542,7 +542,8 @@ h3 {
   line-height: 1.2;
 }
 
-.skill-bar-copy p {
+.skill-description {
+  display: block;
   margin: 0;
   color: var(--muted);
   font-size: 0.78rem;

@@ -415,6 +415,12 @@ h3 {
 
 .experience-section {
   border-top: 1px solid var(--border);
+  padding-bottom: var(--space-5);
+}
+
+#contact {
+  border-top: 1px solid var(--border);
+  padding-top: var(--space-5);
 }
 
 .timeline {

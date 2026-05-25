@@ -520,7 +520,7 @@ h3 {
 
 .skill-dashboard {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-3);
   padding: var(--space-5);
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -529,14 +529,14 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-.skill-bars {
+.skill-dot-map {
   display: grid;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
-.skill-bar-row {
+.skill-dot-row {
   display: grid;
-  grid-template-columns: minmax(250px, 36%) minmax(0, 1fr);
+  grid-template-columns: minmax(250px, 38%) minmax(0, 1fr);
   align-items: center;
   gap: var(--space-3);
 }
@@ -544,7 +544,7 @@ h3 {
 .skill-bar-copy h3 {
   margin: 0 0 4px;
   color: var(--skill-color);
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   line-height: 1.2;
 }
 
@@ -552,60 +552,62 @@ h3 {
   display: block;
   margin: 0;
   color: var(--muted);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   line-height: 1.35;
 }
 
-.skill-bar-track {
-  position: relative;
-  height: 42px;
-  border-left: 1px solid var(--border-strong);
-  border-right: 1px solid var(--border-strong);
-  border-radius: 0;
-  background:
-    repeating-linear-gradient(
-      90deg,
-      rgba(17, 21, 19, 0.14) 0 1px,
-      transparent 1px 25%
-    );
+.skill-dots {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(10px, 1fr));
+  gap: 9px;
+  align-items: center;
 }
 
-.skill-bar-fill {
+.skill-dot {
   display: block;
-  height: 28px;
-  margin-top: 7px;
-  border-radius: 4px;
+  aspect-ratio: 1;
+  width: min(100%, 18px);
+  justify-self: center;
+  border-radius: 999px;
+  background: var(--surface-muted);
+  box-shadow: inset 0 0 0 1px var(--border-strong);
+}
+
+.skill-dot.filled {
   background: var(--skill-color);
-  background: linear-gradient(90deg, var(--skill-color), color-mix(in srgb, var(--skill-color) 88%, #ffffff));
-  box-shadow: 0 8px 18px color-mix(in srgb, var(--skill-color) 12%, transparent);
+  box-shadow: 0 5px 13px color-mix(in srgb, var(--skill-color) 15%, transparent);
 }
 
-.score-99 {
-  width: 99%;
+.skill-dot.partial {
+  background: linear-gradient(90deg, var(--skill-color) 58%, var(--surface-muted) 58%);
+  box-shadow:
+    inset 0 0 0 1px color-mix(in srgb, var(--skill-color) 28%, var(--border-strong)),
+    0 5px 13px color-mix(in srgb, var(--skill-color) 12%, transparent);
 }
 
-.score-98 {
-  width: 98%;
+.skill-dot.empty {
+  background: #eef3ef;
+  box-shadow: inset 0 0 0 1px var(--border-strong);
 }
 
 .chart-green {
-  --skill-color: #0d4532;
+  --skill-color: #1f6f78;
 }
 
 .chart-blue {
-  --skill-color: #243f84;
+  --skill-color: #1f6f78;
 }
 
 .chart-amber {
-  --skill-color: #7a4311;
+  --skill-color: #1f6f78;
 }
 
 .chart-violet {
-  --skill-color: #4f357f;
+  --skill-color: #1f6f78;
 }
 
 .chart-teal {
-  --skill-color: #235f58;
+  --skill-color: #1f6f78;
 }
 
 .tool-list {
@@ -771,7 +773,7 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .skill-bar-row {
+  .skill-dot-row {
     grid-template-columns: minmax(230px, 38%) minmax(0, 1fr);
   }
 }
@@ -865,7 +867,7 @@ h3 {
     grid-template-columns: 1fr;
   }
 
-  .skill-bar-row {
+  .skill-dot-row {
     grid-template-columns: 1fr;
   }
 
@@ -873,13 +875,8 @@ h3 {
     grid-column: auto;
   }
 
-  .skill-bar-track {
-    height: 14px;
-  }
-
-  .skill-bar-fill {
-    height: 14px;
-    margin-top: 0;
+  .skill-dots {
+    gap: 6px;
   }
 
   .button-row,
